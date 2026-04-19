@@ -94,6 +94,12 @@ function compactInlineRows(rows) {
   return rows.filter((row) => Array.isArray(row) && row.length > 0);
 }
 
+function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 function getSourceMessageId(sourceMessage) {
   const messageId = sourceMessage?.message_id;
   return Number.isInteger(messageId) && messageId > 0 ? messageId : null;
@@ -361,9 +367,16 @@ export class MiniCrmBotApp {
         console.error("[summary-scheduler]", error);
       }
     });
+    this.pollingActive = false;
+    this.pollingAbortController = null;
+    this.pollingPromise = null;
+    this.pollingOffset = 0;
   }
 
-  async start({ registerWebhook = true } = {}) {
+  async start({
+    registerWebhook = true,
+    usePolling = false
+  } = {}) {
     if (registerWebhook) {
       const webhookUrl = `${this.config.botPublicUrl}/telegram/webhook/${this.config.botWebhookSecret}`;
 
@@ -372,6 +385,11 @@ export class MiniCrmBotApp {
         secret_token: this.config.botWebhookSecret,
         allowed_updates: ["message", "callback_query"]
       });
+    } else if (usePolling) {
+      await this.telegram.deleteWebhook({
+        drop_pending_updates: false
+      });
+      this.startPolling();
     }
 
     this.syncSummaryUsers();
@@ -379,7 +397,64 @@ export class MiniCrmBotApp {
   }
 
   stop() {
+    this.stopPolling();
     this.summaryScheduler.stop();
+  }
+
+  startPolling() {
+    if (this.pollingActive) {
+      return;
+    }
+
+    this.pollingActive = true;
+    this.pollingAbortController = new AbortController();
+    this.pollingPromise = this.pollTelegramUpdates().catch((error) => {
+      if (this.pollingActive) {
+        console.error("[telegram-polling]", error);
+      }
+    });
+  }
+
+  stopPolling() {
+    this.pollingActive = false;
+
+    if (this.pollingAbortController) {
+      this.pollingAbortController.abort();
+      this.pollingAbortController = null;
+    }
+  }
+
+  async pollTelegramUpdates() {
+    while (this.pollingActive) {
+      try {
+        const updates = await this.telegram.getUpdates(
+          {
+            offset: this.pollingOffset || undefined,
+            timeout: 25,
+            allowed_updates: ["message", "callback_query"]
+          },
+          {
+            signal: this.pollingAbortController?.signal,
+            timeoutMs: 30_000
+          }
+        );
+
+        for (const update of updates ?? []) {
+          if (Number.isInteger(update.update_id)) {
+            this.pollingOffset = update.update_id + 1;
+          }
+
+          await this.handleTelegramUpdate(update);
+        }
+      } catch (error) {
+        if (!this.pollingActive || error?.name === "AbortError") {
+          return;
+        }
+
+        console.error("[telegram-polling]", error);
+        await delay(2_000);
+      }
+    }
   }
 
   async sendInlineScreen(chatId, payload, sourceMessage = null) {

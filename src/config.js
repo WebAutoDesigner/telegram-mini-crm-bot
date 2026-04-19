@@ -65,8 +65,8 @@ function readRequired(name) {
 
 function readTelegramUpdatesMode() {
   const value = String(process.env.TELEGRAM_UPDATES_MODE ?? "webhook").trim().toLowerCase();
-  if (value !== "webhook" && value !== "api-only") {
-    throw new Error("TELEGRAM_UPDATES_MODE must be either webhook or api-only");
+  if (value !== "webhook" && value !== "api-only" && value !== "polling") {
+    throw new Error("TELEGRAM_UPDATES_MODE must be webhook, api-only, or polling");
   }
 
   return value;

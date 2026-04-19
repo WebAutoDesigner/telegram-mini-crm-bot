@@ -75,6 +75,29 @@ npm run smoke
 
 Все проверки на момент обновления документа проходят.
 
+## Режимы получения Telegram updates
+
+Поддерживаются три режима:
+
+```env
+TELEGRAM_UPDATES_MODE=api-only
+TELEGRAM_UPDATES_MODE=polling
+TELEGRAM_UPDATES_MODE=webhook
+```
+
+- `api-only` поднимает `/health` и `/api/leads`, но не получает события из Telegram.
+- `polling` снимает webhook и сам забирает события через `getUpdates`; подходит для теста без домена и HTTPS.
+- `webhook` регистрирует Telegram webhook; это боевой режим после настройки HTTPS-домена.
+
+## Текущее боевое состояние
+
+- На сервере бот работает под PM2 в режиме `polling`.
+- `/health` отвечает `{"ok":true}`.
+- Telegram-меню CRM открывается через `/start`.
+- Входящие сообщения клиентов попадают в раздел `Сообщения`.
+- Заявки с сайта приходят в CRM и создают лиды.
+- На Node.js 22 Telegram API вызывается через `src/utils/ipv4-fetch.js`, чтобы принудительно использовать IPv4. Это нужно из-за таймаутов встроенного `fetch`/`undici` на IPv6: без фикса polling падал с `ConnectTimeoutError`, бот не получал команды и не отправлял уведомления.
+
 ## Ключевые файлы
 
 - [README.md](../README.md)
@@ -82,6 +105,7 @@ npm run smoke
 - [src/app.js](../src/app.js)
 - [src/storage/database.js](../src/storage/database.js)
 - [src/server.js](../src/server.js)
+- [src/utils/ipv4-fetch.js](../src/utils/ipv4-fetch.js)
 - [tests/app.test.js](../tests/app.test.js)
 - [scripts/smoke.js](../scripts/smoke.js)
 

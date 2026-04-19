@@ -6,6 +6,7 @@ import { SessionStore } from "./services/session-store.js";
 import { AppDatabase } from "./storage/database.js";
 import { createHttpServer } from "./server.js";
 import { TelegramApiClient } from "./telegram/index.js";
+import { ipv4Fetch } from "./utils/ipv4-fetch.js";
 
 async function main() {
   const config = loadConfig();
@@ -13,7 +14,7 @@ async function main() {
   db.initialize();
   db.seedOwner();
 
-  const telegramClient = new TelegramApiClient(config.botToken);
+  const telegramClient = new TelegramApiClient(config.botToken, { fetch: ipv4Fetch });
   const sessionStore = new SessionStore();
   const app = new MiniCrmBotApp({
     config,
@@ -22,8 +23,10 @@ async function main() {
     sessionStore
   });
 
-  const registerWebhook = config.telegramUpdatesMode === "webhook";
-  await app.start({ registerWebhook });
+  await app.start({
+    registerWebhook: config.telegramUpdatesMode === "webhook",
+    usePolling: config.telegramUpdatesMode === "polling"
+  });
 
   const server = createHttpServer({ config, app });
   server.listen(config.port, () => {

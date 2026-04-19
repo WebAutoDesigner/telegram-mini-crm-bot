@@ -197,4 +197,12 @@ export class TelegramApiClient {
   setWebhook(payload, options) {
     return this.callApi("setWebhook", payload, options);
   }
+
+  deleteWebhook(payload, options) {
+    return this.callApi("deleteWebhook", payload, options);
+  }
+
+  getUpdates(payload, options) {
+    return this.callApi("getUpdates", payload, options);
+  }
 }

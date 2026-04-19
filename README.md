@@ -66,6 +66,14 @@ npm run smoke
 - `POST /telegram/webhook/{BOT_WEBHOOK_SECRET}`
 - `POST /api/leads`
 
+`TELEGRAM_UPDATES_MODE` controls how Telegram updates are received:
+
+- `webhook` - register Telegram webhook
+- `polling` - read updates with `getUpdates` without HTTPS
+- `api-only` - keep only HTTP API endpoints enabled
+
+On Node.js 22 the bot uses `src/utils/ipv4-fetch.js` for Telegram API calls. It forces IPv4 for `api.telegram.org`, avoiding `undici` IPv6 `ConnectTimeoutError` issues seen on the production server.
+
 Для `/api/leads` нужен заголовок:
 
 ```text

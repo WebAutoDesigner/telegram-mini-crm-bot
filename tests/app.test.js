@@ -14,7 +14,7 @@ import { SessionStore } from "../src/services/session-store.js";
 import { AppDatabase } from "../src/storage/database.js";
 import { buildLocalDateTimeFromParts, getZonedDateTimeParts } from "../src/utils/index.js";
 
-function createTelegramStub() {
+function createTelegramStub(options = {}) {
   const calls = [];
 
   return {
@@ -34,6 +34,17 @@ function createTelegramStub() {
     setWebhook: async (payload) => {
       calls.push({ method: "setWebhook", payload });
       return { ok: true };
+    },
+    deleteWebhook: async (payload) => {
+      calls.push({ method: "deleteWebhook", payload });
+      return { ok: true };
+    },
+    getUpdates: async (payload, requestOptions = {}) => {
+      calls.push({ method: "getUpdates", payload });
+      if (options.getUpdates) {
+        return options.getUpdates(payload, requestOptions);
+      }
+      return [];
     }
   };
 }
@@ -50,14 +61,15 @@ function createTempConfig(tempDir) {
     databasePath: path.join(tempDir, "bot.sqlite"),
     botPublicUrl: "https://example.com",
     botWebhookSecret: "secret",
+    telegramUpdatesMode: "webhook",
     siteApiKey: "test-site-key"
   };
 }
 
-function createTestContext() {
+function createTestContext(options = {}) {
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "telegram-mini-crm-bot-test-"));
   const config = createTempConfig(tempDir);
-  const telegram = createTelegramStub();
+  const telegram = options.telegram ?? createTelegramStub();
   const db = new AppDatabase(config.databasePath, config);
   db.initialize();
   const owner = db.seedOwner();
@@ -137,6 +149,48 @@ test("nav:main clears an active session before returning to the main menu", asyn
     assert.ok(telegram.calls.some((call) => call.method === "answerCallbackQuery"));
     assert.ok(telegram.calls.some((call) => call.method === "sendMessage"));
   } finally {
+    cleanup();
+  }
+});
+
+test("app can start without registering Telegram webhook", async () => {
+  const { app, telegram, cleanup } = createTestContext();
+
+  try {
+    await app.start({ registerWebhook: false });
+
+    assert.equal(telegram.calls.some((call) => call.method === "setWebhook"), false);
+  } finally {
+    app.stop();
+    cleanup();
+  }
+});
+
+test("polling mode deletes webhook and starts reading Telegram updates", async () => {
+  let resolvePolling;
+  const telegram = createTelegramStub({
+    getUpdates: (_payload, options = {}) =>
+      new Promise((resolve) => {
+        resolvePolling = resolve;
+        if (options.signal?.aborted) {
+          resolve([]);
+          return;
+        }
+        options.signal?.addEventListener("abort", () => resolve([]), { once: true });
+      })
+  });
+  const { app, cleanup } = createTestContext({ telegram });
+
+  try {
+    await app.start({ registerWebhook: false, usePolling: true });
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    assert.ok(telegram.calls.some((call) => call.method === "deleteWebhook"));
+    assert.ok(telegram.calls.some((call) => call.method === "getUpdates"));
+    assert.equal(telegram.calls.some((call) => call.method === "setWebhook"), false);
+  } finally {
+    app.stop();
+    resolvePolling?.([]);
     cleanup();
   }
 });
