@@ -363,14 +363,16 @@ export class MiniCrmBotApp {
     });
   }
 
-  async start() {
-    const webhookUrl = `${this.config.botPublicUrl}/telegram/webhook/${this.config.botWebhookSecret}`;
+  async start({ registerWebhook = true } = {}) {
+    if (registerWebhook) {
+      const webhookUrl = `${this.config.botPublicUrl}/telegram/webhook/${this.config.botWebhookSecret}`;
 
-    await this.telegram.setWebhook({
-      url: webhookUrl,
-      secret_token: this.config.botWebhookSecret,
-      allowed_updates: ["message", "callback_query"]
-    });
+      await this.telegram.setWebhook({
+        url: webhookUrl,
+        secret_token: this.config.botWebhookSecret,
+        allowed_updates: ["message", "callback_query"]
+      });
+    }
 
     this.syncSummaryUsers();
     this.summaryScheduler.start();

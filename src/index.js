@@ -22,11 +22,12 @@ async function main() {
     sessionStore
   });
 
-  await app.start();
+  const registerWebhook = config.telegramUpdatesMode === "webhook";
+  await app.start({ registerWebhook });
 
   const server = createHttpServer({ config, app });
   server.listen(config.port, () => {
-    console.log(`[telegram-mini-crm-bot] listening on ${config.port}`);
+    console.log(`[telegram-mini-crm-bot] listening on ${config.port} (${config.telegramUpdatesMode})`);
   });
 
   const shutdown = () => {

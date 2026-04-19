@@ -63,6 +63,15 @@ function readRequired(name) {
   return value;
 }
 
+function readTelegramUpdatesMode() {
+  const value = String(process.env.TELEGRAM_UPDATES_MODE ?? "webhook").trim().toLowerCase();
+  if (value !== "webhook" && value !== "api-only") {
+    throw new Error("TELEGRAM_UPDATES_MODE must be either webhook or api-only");
+  }
+
+  return value;
+}
+
 export function loadConfig() {
   loadDotEnvFile();
   const dataDir = resolveDataDir(process.env.DATA_DIR);
@@ -75,6 +84,7 @@ export function loadConfig() {
     botToken: readRequired("BOT_TOKEN"),
     botPublicUrl: readRequired("BOT_PUBLIC_URL").replace(/\/+$/, ""),
     botWebhookSecret: readRequired("BOT_WEBHOOK_SECRET"),
+    telegramUpdatesMode: readTelegramUpdatesMode(),
     siteApiKey: readRequired("SITE_API_KEY"),
     dataDir,
     databasePath: path.join(dataDir, "bot.sqlite"),
