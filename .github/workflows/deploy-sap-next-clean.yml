@@ -42,8 +42,17 @@ jobs:
         run: npm run build:pages
 
       - name: Publish to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: sap-next-clean/out
-          force_orphan: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git clone --depth 1 --branch gh-pages "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ../pages || git init ../pages
+          rm -rf ../pages/*
+          cp -R out/. ../pages/
+          touch ../pages/.nojekyll
+          cd ../pages
+          git add -A
+          git commit -m "Deploy detailing site" || exit 0
+          git branch -M gh-pages
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages --force
