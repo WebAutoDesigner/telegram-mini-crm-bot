@@ -1,0 +1,564 @@
+{
+  "brandName": "AMS detailing",
+  "contacts": {
+    "phoneDisplay": "+7 (000) 000-00-00",
+    "phoneHref": "tel:+70000000000",
+    "phoneDigits": "70000000000",
+    "email": "@mail.ru"
+  },
+  "contactBlock": {
+    "description": "Профессиональный уход и защита вашего автомобиля",
+    "address": "Самара",
+    "hours": "Пн–Вс: 9:00 – 20:00",
+    "mapAddress": "Самара",
+    "socials": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/",
+        "icon": "https://static.tildacdn.com/tild3662-3365-4237-b331-616662386337/_2.svg"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "https://api.whatsapp.com/",
+        "icon": "https://static.tildacdn.com/tild6433-3938-4761-b663-313263626563/whatsapp_icon.svg"
+      },
+      {
+        "label": "Telegram",
+        "href": "https://t.me/",
+        "icon": "https://static.tildacdn.com/tild6563-3936-4530-a265-656563323937/Group_2.svg"
+      },
+      {
+        "label": "VK",
+        "href": "https://vk.com/",
+        "icon": "https://static.tildacdn.com/tild3437-3230-4962-b539-633064613939/_1.svg"
+      }
+    ]
+  },
+  "home": {
+    "heroTitleHtml": "ДЕТЕЙЛИНГ ЦЕНТР<br>В САМАРЕ",
+    "heroTitleMobileHtml": "ДЕТЕЙЛИНГ ЦЕНТР<br>В САМАРЕ",
+    "heroDescription": "Профессиональный уход и защита вашего автомобиля"
+  },
+  "heroImage": "/assets/img/srv/9209392f-696b-4813-a637-3cee12a9daec.png",
+  "heroImageMobile": "/assets/img/srv/e72acee3-8f2f-4198-bea2-be75dd826c4f.png",
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/",
+      "icon": "https://static.tildacdn.com/tild3662-3365-4237-b331-616662386337/_2.svg"
+    },
+    {
+      "label": "WhatsApp",
+      "href": "https://api.whatsapp.com/",
+      "icon": "https://static.tildacdn.com/tild6433-3938-4761-b663-313263626563/whatsapp_icon.svg"
+    },
+    {
+      "label": "Telegram",
+      "href": "https://t.me/",
+      "icon": "https://static.tildacdn.com/tild6563-3936-4530-a265-656563323937/Group_2.svg"
+    },
+    {
+      "label": "VK",
+      "href": "https://vk.com/",
+      "icon": "https://static.tildacdn.com/tild3437-3230-4962-b539-633064613939/_1.svg"
+    }
+  ],
+  "services": [
+    {
+      "title": "Детейлинг услуги",
+      "href": "/detailing-uslugi/",
+      "slug": "detailing-uslugi",
+      "image": "/assets/img/srv/7fdcb6ba-4e56-4604-8802-7fa91b3e9527.jpg",
+      "imageMobile": "/assets/img/srv/7fdcb6ba-4e56-4604-8802-7fa91b3e9527.jpg",
+      "heroTitle": "ДЕТЕЙЛИНГ УСЛУГИ",
+      "heroImage": "/assets/img/srv/e00522a4-4279-4f2c-a898-afa21a5c0f04.jpg",
+      "heroImageMobile": "/assets/img/srv/e00522a4-4279-4f2c-a898-afa21a5c0f04.jpg",
+      "description": "Подразумевает комплекс ухода за автомобилем с использованием дорогих материалов. Команда профессионалов вернет заводской блеск авто, освежит все устаревшие элементы. В нашем детейлинг центре существует несколько видов комлексов. Ниже представлена информация о каждом из них. В список детейлинг услуг входит:",
+      "subservices": [
+        {
+          "id": 3,
+          "title": "ХИМЧИСТКА САЛОНА",
+          "slug": "khimchistka-salona",
+          "heading": "Химчистка салона",
+          "description": "Химчистка салона автомобиля — это тщательная, детальная очистка, уход за всеми поверхностями элементов салона и очистка всех труднодоступных мест, полировка глянцевых деталей и покрытие поверхностей защитными составами, чтобы сохранить результат надолго.",
+          "images": [
+            {
+              "image": "/assets/img/srv/7099ca7b-e1e6-4766-9256-d983bc4916a6.jpg",
+              "imageMobile": "/assets/img/srv/d2ad7a1b-6bb6-4bfb-bc33-3ba11cbf2f8a.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "1 класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "от 29 000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "31 000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 33 000 ₽"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "ДЕЗИНФЕКЦИЯ САЛОНА",
+          "slug": "dezinfektsiya-salona-i-sistemy-konditsionirovaniya",
+          "heading": "дезинфекция салона и системы кондиционирования",
+          "description": "Дезинфекция салона и системы кондиционирования/отопления полностью избавит Вас от дискомфорта. Команда профессионалов выполнит дезинфекцию озонированием, сам по себе процесс деликатный и безопасен для внутренних покрытий и элементов интерьера.",
+          "images": [
+            {
+              "image": "/assets/img/srv/52ba0c93-c5d6-4ad4-9ad9-e4e72885485a.jpg",
+              "imageMobile": "/assets/img/srv/97d8fe65-063c-4424-96ca-3b81c97a5704.jpg"
+            },
+            {
+              "image": "/assets/img/srv/7a69153e-8dda-426c-b88c-05d85aceceba.jpg",
+              "imageMobile": "/assets/img/srv/3e6500b2-7443-492a-b1cc-73fc49a9c4ac.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "3000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "3000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 3000 ₽"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "ПОДКАПОТНОЕ ПРОСТРАНСТВО",
+          "slug": "deteyling-podkapotnogo-prostranstva",
+          "heading": "ДЕТЕЙЛИНГ ПОДКАПОТНОГО ПРОСТРАНСТВА",
+          "description": "Детейлинг подкапотного пространства  — это комплекс услуг сосредоточенный на достижении максимальной чистоты и безупречном внешнем виде моторного отсека.",
+          "images": [
+            {
+              "image": "/assets/img/srv/9d55afff-33af-4cb6-9b0e-660ec0766ef4.jpg",
+              "imageMobile": "/assets/img/srv/e230fd13-b1bf-4316-9073-126d44f3cfd1.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "7000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "9000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 12 000 ₽"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Покрытие для кузова",
+      "href": "/pokritite-kuzova/",
+      "slug": "pokritite-kuzova",
+      "image": "/assets/img/srv/dca70ac1-5ce1-486b-b546-f4d18eaac369.jpg",
+      "imageMobile": "/assets/img/srv/e73a7171-b282-4338-8978-c3149c491c5b.jpg",
+      "heroTitle": "ПОКРЫТИЯ ДЛЯ КУЗОВА",
+      "heroImage": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg",
+      "heroImageMobile": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg",
+      "description": "Керамика — лучшее защитное покрытие для ЛКП вашего автомобиля! Нанесение состава требует точного соблюдения технологий. Керамическое покрытие надолго защитит Ваш автомобиль от царапин, мелких сколов, придаст ему блеск и глубину цвета и создаст превосходные гидрофобные свойства. Гидрофоб позволит автомобилю дольше оставаться чистым, капли воды не будут растекаться и задерживаться на поверхности кузова. Ниже представлены услуги по нанесению керамики:",
+      "subservices": [
+        {
+          "id": 7,
+          "title": "КЕРАМИКА III СЛОЯ",
+          "slug": "pokrytie-keramikoy-3-sloya",
+          "heading": "ПОКРЫТИЕ КЕРАМИКОЙ 3 СЛОЯ",
+          "description": "При нанесении керамики на авто важно соблюдать технологии и требования к нанесению. Значение имеет даже температура в помещении и влажность. Процесс покрытия авто керамикой трубет точного соблюдения временных интервалов между нанесением состава, его располировкой и покрытием последующими слоями.",
+          "images": [
+            {
+              "image": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg",
+              "imageMobile": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "49 000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "55 000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 66 000 ₽"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "КЕРАМИКА V СЛОЕВ",
+          "slug": "pokrytie-keramikoy-5-sloev",
+          "heading": "ПОКРЫТИЕ КЕРАМИКОЙ 5 СЛОЕВ",
+          "description": "Мы можем нанести большее количество слоев, что позволит продлить долговременность защиты. Однако, мы не рекомендуем наносить более 4 слоев, так как это лишь незначительно улучшит свойства покрытия.",
+          "images": [
+            {
+              "image": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg",
+              "imageMobile": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg"
+            },
+            {
+              "image": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg",
+              "imageMobile": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg"
+            },
+            {
+              "image": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg",
+              "imageMobile": "/assets/img/srv/e647cb07-a7a4-493d-9fb5-894c14d91c8a.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "60 000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "71 000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 77 000 ₽"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Полировка автомобиля",
+      "href": "/polirovka/",
+      "slug": "polirovka",
+      "image": "/assets/img/srv/e33f77cd-ccf6-4cbc-b181-9b1c3506cff4.jpg",
+      "imageMobile": "/assets/img/srv/f33050f5-649e-4ac9-865b-b8b14b923090.jpg",
+      "heroTitle": "ПОЛИРОВКА АВТОМОБИЛЯ",
+      "heroImage": "/assets/img/srv/d6c39404-4913-4138-b838-921b39eb8deb.jpg",
+      "heroImageMobile": "/assets/img/srv/2f24518d-17ca-4f17-9678-ce7607a019c8.jpg",
+      "description": "Услуга подразумевает полировку и реставрацию лакокрасочного покрытия автомобиля, возвращая первозданный внешний вид, с ультраглянцевым эффектом. Выполняется полировка оптики (передних фар и задних фонарей) с нанесением защитного покрытия, глянцевых стоек, пластиковых изделий не покрытых лаком, виниловых и полиуретановых пленок, декоративных вставок салона. \nДля Вашего удобства мы выделяем несколько направлений по полировке:\n<br> <br> <br> <br> <br>",
+      "subservices": [
+        {
+          "id": 29,
+          "title": "ЛКП КУЗОВА",
+          "slug": "polirovka-far-i-zadnih-fonarey",
+          "heading": "ПОЛИРОВКА ФАР И ЗАДНИХ ФОНАРЕЙ",
+          "description": "Под влиянием большого количества факторов, таких как плохие погодные условия, дорожная пыль, песок и мелкие камни, очистка оптики сухой салфеткой, негативно сказываются на состоянии фар автомобиля. Со временем фары и фонари теряют свою прозрачность и глянцевость, мутнеют. Полировка фар освежит внешний вид автомобиля и светопропускаемость фар. Управление для Вас станет комфортным и безопасным.",
+          "images": [
+            {
+              "image": "/assets/img/srv/447cf286-a374-413c-b949-9de263cbc908.jpg",
+              "imageMobile": "/assets/img/srv/3cfa4467-2aa0-422d-b6b5-2e2406a10071.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "6000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "7000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 8000 ₽"
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "title": "ФАРЫ И ФОНАРИ",
+          "slug": "polirovka-lkp-kuzova-avtomobilya",
+          "heading": "Полировка лкп КУЗОВА АВТОМОБИЛЯ",
+          "description": "Наша команда проявляет индивидуальный подход к каждому автомобилю. Автопроизводители используют разные типы лаков и способы покраски. Перед тем как приступить к выполнению, мы изучим лак применимый в конкретном случае, проверим его толщину, затем выполним восстановительную полировку в 3 этапа. В результате Вы получаете безупречно блестящий автомобиль, вызывающий восторг своим внешним видом и невероятной глубиной цвета.",
+          "images": [
+            {
+              "image": "/assets/img/srv/fbd83a47-0e8e-44fd-86e5-8ee344a578be.jpg",
+              "imageMobile": "/assets/img/srv/3b2fac69-fdfd-482c-a266-cf3e7fb4462e.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "27 000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "35 000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 40 000 ₽"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "title": "ПЛЕНКА КУЗОВА",
+          "slug": "polirovka-glyantsevyh-elementov-salona",
+          "heading": "ПОЛИРОВКА ГЛЯНЦЕВЫХ ЭЛЕМЕНТОВ САЛОНА",
+          "description": "Каждый владелец, чей автомобиль имеет глянцевые или лакированные детали интерьера знает насколько легко и быстро они царапаются, особенно контактные зоны. Но благодаря доступным технологиям, специалисты нашей команды без проблем восстановят первозданный блеск деталей салона.",
+          "images": [
+            {
+              "image": "/assets/img/srv/1c0b3456-d308-418e-936f-fd0297282f72.webp",
+              "imageMobile": "/assets/img/srv/0eeb5350-9aae-463a-9a1f-a42908da6a27.webp"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "от 16 000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "от 18 000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 20 000 ₽"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Шумоизоляция",
+      "href": "/okleyka-antigraviynoy-plenkoy/",
+      "slug": "okleyka-antigraviynoy-plenkoy",
+      "image": "/assets/img/srv/b02bbd3c-b85c-4311-b687-1bcf0434f16e.jpg",
+      "imageMobile": "/assets/img/srv/709fed02-7e95-496a-a9fe-413ed33c7fb8.jpg",
+      "heroTitle": "ШУМОИЗОЛЯЦИЯ АВТОМОБИЛЯ",
+      "heroImage": "/assets/img/srv/4af51c25-4bbf-422e-9f28-4dd811b4ffff.jpg",
+      "heroImageMobile": "/assets/img/srv/d79ab458-c9ef-4d02-ae7a-fb36901e799d.jpg",
+      "description": "Профессиональная шумовиброизоляция всех зон кузова. Тишина и комфорт в любых условиях движения.",
+      "subservices": [
+        {
+          "id": 9,
+          "title": "Полная Шумоизоляция салона",
+          "slug": "kompleks-a1-chastichnaya-okleyka",
+          "heading": "Полная Шумоизоляция салона ",
+          "description": "Виброшумоизоляция автомобиля позволяет раз и навсегда избавиться от раздражающего уличного шума, скрипов, а также от вибраций двери, колесных арок, багажника, крыши и пола в салоне. ",
+          "images": [
+            {
+              "image": "/assets/img/srv/1bbb45ed-e586-479b-aab8-d4f1db73b75c.jpg",
+              "imageMobile": "/assets/img/srv/319c3e37-64a9-49d4-90b1-ed7823964c31.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "I класс: гольф класс (BMW 1, 2, VW Golf, Audi A3, Mercedes A-class, B-class и т. д.)",
+              "price": "17 000 ₽"
+            },
+            {
+              "name": "II класс: среднеразмерные автомобили, компактные кроссоверы, бизнес класс (Mercedes C,D,E, Audi A4, A5, A6, A7, BMW 5,6, Toyota Camry, Lexus GS, ES, Infinity Q25, EX и т. д.)",
+              "price": "19 000 ₽"
+            },
+            {
+              "name": "III класс: представительские автомобили и суперкары, джипы и большие кроссоверы (Mercedes S-class, BMW 7-series, Mercedes G,GL, Toyota Land Cruiser 200, BMW X5, X6, Audi Q7, Ferrari, Lamborghini, Porsche, Maserati и т. д.)",
+              "price": "от 21 000 ₽"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Реставрация кожи",
+      "href": "/restavratsiya-kozhi/",
+      "slug": "restavratsiya-kozhi",
+      "image": "/assets/img/srv/97a9cf5d-6e15-465a-8796-c59096c2b92b.jpg",
+      "imageMobile": "/assets/img/srv/c273bac6-0ec8-439c-85b1-8f0bbc8b79d3.jpg",
+      "heroTitle": "РЕСТАВРАЦИЯ КОЖИ",
+      "heroImage": "/assets/img/srv/36fb949f-b0fb-40b9-905f-a32dc3e7a373.jpg",
+      "heroImageMobile": "/assets/img/srv/a960176d-1c6b-44d2-b522-3303c00f8b7d.jpg",
+      "description": "Реставрация кожи — это совокупность технологических процессов, по устранению и ремонту повреждений кожи, с последующей покраской и восстановлением слоя лака. Реставрация также способствует продлению срока эксплуатации изделий из кожи: руль, ручка кпп, сиденья, подлокотник и тд. В список услуг входит:",
+      "subservices": [
+        {
+          "id": 16,
+          "title": "Защита нового салона",
+          "slug": "zaschita-novogo-salona",
+          "heading": "Защита нового салона",
+          "description": "Защита кожи интерьера для нового автомобиля - очень важный этап в начале эксплуатации. Покрывая кожаные изделия интерьера защитными керамическими составами, Вы предотвращаете растрескивание поверхности в дальнейшем и защищаете от химических воздействий, прокрасов.",
+          "images": [
+            {
+              "image": "/assets/img/srv/6090a9fe-d571-4be0-b0a6-a5883533b921.jpg",
+              "imageMobile": "/assets/img/srv/76d56e81-76af-4e5e-8199-0a2cb861808e.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "1 класс",
+              "price": "от 5000"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "title": "Реставрация кожи",
+          "slug": "restavratsiya-kozhanykh-izdeliy",
+          "heading": "Реставрация кожи",
+          "description": "Благодаря новейшей технологии, не имеющей аналогов в сфере защитных покрытий для кожи, мы запустили услугу защиты кожаных салонов по технологии LeTech X-GUARD.",
+          "images": [
+            {
+              "image": "/assets/img/srv/78421e9b-da3c-42cc-94d3-dc0f99d4f4ad.jpg",
+              "imageMobile": "/assets/img/srv/a7c438f9-f4cc-41cd-921e-94e224d3b6b0.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "класс 2",
+              "price": "от 4000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Оклейка пленкой",
+      "href": "/okleyka-cvetnoy-plenkoy/",
+      "slug": "okleyka-cvetnoy-plenkoy",
+      "image": "/assets/img/srv/bb3d1364-07be-45df-ae19-966c59307e9f.webp",
+      "imageMobile": "/assets/img/srv/efd8f269-e177-40de-ad32-e71e8bd69a39.webp",
+      "heroTitle": "ОКЛЕЙКА ПЛЕНКОЙ",
+      "heroImage": "/assets/img/srv/9d73c3c5-88b4-4a28-978c-180bca8cc58d.jpg",
+      "heroImageMobile": "/assets/img/srv/309861be-70ae-47cd-8f38-a67bda0dca82.jpg",
+      "description": "Комплекс услуг по защите ЛКП автомобиля с использованием премиальных, виниловых и полиуретановых пленок. Команда профессионалов выполнит оклейку деталей интерьера и экстерьера на самом высшем уровне. ",
+      "subservices": [
+        {
+          "id": 23,
+          "title": "Оклейка матовой пленкой",
+          "slug": "okleyka-tsvetnoy-matovoy-plenkoy",
+          "heading": "Оклейка матовой пленкой",
+          "description": "Cоздание и воплощение эксклюзивного внешнего стиля",
+          "images": [
+            {
+              "image": "/assets/img/srv/3d0fdb9d-62e1-42d6-813a-7f2275abfbee.jpg",
+              "imageMobile": "/assets/img/srv/706a6756-a2ae-4674-837c-e7422404a504.jpg"
+            }
+          ],
+          "contentBlocks": [],
+          "priceRows": [
+            {
+              "name": "1 класс",
+              "price": "от 100000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Антидождь",
+      "href": "/antidozhd/",
+      "slug": "antidozhd",
+      "image": "/assets/img/srv/ddea8df4-a12d-46be-a31a-c6ecee63d253.png",
+      "imageMobile": "/assets/img/srv/7b470a07-b00d-48bf-9e0a-6573ccf94d3b.png",
+      "heroTitle": "АНТИДОЖДЬ",
+      "heroImage": "/assets/img/srv/03019ee5-c177-45f3-9e28-a9a0491841bc.jpg",
+      "heroImageMobile": "/assets/img/srv/d25f4023-720e-4c86-8f69-846ca6f40806.jpg",
+      "description": "Услуга включает подготовку и покрытие лобового, передних стекол и зеркал гидрофобным защитным покрытием антидождь. Антидождь улучшает видимость во время дождя, мокрого снега, защищает от жидкой грязи из-под колес впереди идущих или обгоняющих автомобилей. Покрытие минимизирует образование водной пленки (шторы воды) при попадании большого объема воды на лобовое стекло.",
+      "subservices": []
+    },
+    {
+      "title": "Тонировка",
+      "href": "/tonirovka/",
+      "slug": "tonirovka",
+      "image": "/assets/img/srv/bea9d236-3966-4d13-8892-b399ce5dfbdf.webp",
+      "imageMobile": "/assets/img/srv/db1e9ed6-9fb3-4ad3-8545-cab0223f4e31.webp",
+      "heroTitle": "Тонировка ",
+      "heroImage": "/assets/img/srv/4fa73cb1-7e61-4387-9f96-ce1ef33e9013.jpg",
+      "heroImageMobile": "/assets/img/srv/42dbdec5-b7a6-497a-aa0b-593587e4e22b.jpg",
+      "description": "Профессиональная тонировка стёкол сертифицированными плёнками. Защита от УФ, снижение нагрева салона, приватность и стиль.",
+      "subservices": []
+    }
+  ],
+  "reviews": {
+    "items": [
+      {
+        "name": "Алексей",
+        "car": "BMW X5",
+        "source": "twogis",
+        "text": "Обратился за комплексным детейлингом и защитой кузова. Машину приняли вовремя, подробно объяснили этапы работ и отдали в отличном состоянии."
+      },
+      {
+        "name": "Марина",
+        "car": "Mercedes-Benz GLC",
+        "source": "yandex",
+        "text": "Понравился спокойный сервис без навязчивости. Салон после чистки выглядит аккуратно, все детали обработаны бережно."
+      },
+      {
+        "name": "Дмитрий",
+        "car": "Audi Q7",
+        "source": "twogis",
+        "text": "Делал антигравийную пленку и полировку. Результат ровный, по срокам не подвели, менеджер всегда был на связи."
+      },
+      {
+        "name": "Ирина",
+        "car": "Porsche Macan",
+        "source": "yandex",
+        "text": "Очень внимательное отношение к автомобилю. После покрытия кузов стал заметно легче мыть, блеск сохранился даже после нескольких недель эксплуатации."
+      }
+    ]
+  },
+  "works": [
+    {
+      "image": "/assets/img/srv/6c6deae3-a490-4209-8d81-54c484133fe0.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/289f123c-ce3a-474f-8401-f02bcd144f38.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/b28d4427-24bc-4677-856c-e2a1061d036a.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/054acefa-bfd1-4f01-8345-1d1299362eee.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/9d50846e-0ad3-496a-b72c-154b130070e6.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/387725a9-7005-43a9-af30-691aabd99588.png",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/6a6d44cd-54f1-4a5b-bae3-b33dfa8b8a24.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/23e3a998-e3b1-42e7-8bad-485625035d89.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/78e2b785-9b75-4259-aae8-990a1177a10d.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/assets/img/srv/82c8f135-8325-4723-b34e-0f877e52807a.jpg",
+      "alt": ""
+    }
+  ]
+}
