@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { CallbackButton } from "@/components/CallbackButton";
 import { PriceTable } from "@/components/PriceTable";
 import { findService, site } from "@/data/site";
+import { publicPath } from "@/lib/publicPath";
 
 export function generateStaticParams() {
   return site.services.map((service) => ({ slug: service.href.replace(/^\/|\/$/g, "") }));
@@ -26,8 +27,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <h1>{title}</h1>
           {hero ? (
             <picture className="service-hero__image">
-              <source media="(max-width: 640px)" srcSet={heroMobile} />
-              <img src={hero} alt="" />
+              <source media="(max-width: 640px)" srcSet={publicPath(heroMobile)} />
+              <img src={publicPath(hero)} alt="" />
             </picture>
           ) : null}
           {service.description ? <p>{service.description}</p> : null}
@@ -77,8 +78,8 @@ function SubserviceCard({ subservice }: { subservice: { description?: string; im
     <div className="subservice-card">
       {image ? (
         <picture className="subservice-card__image">
-          {image.imageMobile && image.imageMobile !== image.image ? <source media="(max-width: 640px)" srcSet={image.imageMobile} /> : null}
-          <img src={image.image || image.imageMobile} alt="" loading="lazy" />
+          {image.imageMobile && image.imageMobile !== image.image ? <source media="(max-width: 640px)" srcSet={publicPath(image.imageMobile)} /> : null}
+          <img src={publicPath(image.image || image.imageMobile)} alt="" loading="lazy" />
         </picture>
       ) : null}
       {subservice.description ? <p className="subservice-card__text">{subservice.description}</p> : null}
@@ -94,8 +95,8 @@ function ImageGrid({ images }: { images: Array<{ image?: string; imageMobile?: s
     <div className="image-grid">
       {visible.map((image, index) => (
         <picture key={`${image.image}-${index}`}>
-          {image.imageMobile && image.imageMobile !== image.image ? <source media="(max-width: 640px)" srcSet={image.imageMobile} /> : null}
-          <img src={image.image || image.imageMobile} alt="" loading="lazy" />
+          {image.imageMobile && image.imageMobile !== image.image ? <source media="(max-width: 640px)" srcSet={publicPath(image.imageMobile)} /> : null}
+          <img src={publicPath(image.image || image.imageMobile)} alt="" loading="lazy" />
         </picture>
       ))}
     </div>

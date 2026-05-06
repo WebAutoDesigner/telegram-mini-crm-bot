@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3010",
     "build": "next build",
+    "build:pages": "next build && node scripts/patch-pages-css.mjs",
     "start": "next start -p 3010",
     "lint": "next lint"
   },

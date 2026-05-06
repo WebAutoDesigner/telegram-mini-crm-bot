@@ -1,0 +1,49 @@
+name: Deploy detailing site
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "sap-next-clean/**"
+      - ".github/workflows/deploy-sap-next-clean.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: detailing-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sap-next-clean
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: sap-next-clean/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        env:
+          GITHUB_PAGES: "true"
+          NEXT_PUBLIC_BASE_PATH: "/telegram-mini-crm-bot"
+        run: npm run build:pages
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: sap-next-clean/out
+          force_orphan: true

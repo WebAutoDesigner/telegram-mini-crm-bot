@@ -4,6 +4,7 @@ import { HomePricePreview } from "@/components/HomePricePreview";
 import { ServiceCards } from "@/components/ServiceCards";
 import { WorksGallery } from "@/components/WorksGallery";
 import { site } from "@/data/site";
+import { publicPath } from "@/lib/publicPath";
 
 export default function HomePage() {
   const works = site.works.filter((work) => work.image);
@@ -12,8 +13,8 @@ export default function HomePage() {
     <>
       <section className="hero">
         <picture>
-          <source media="(max-width: 640px)" srcSet={site.heroImageMobile} />
-          <img src={site.heroImage} alt="" />
+          <source media="(max-width: 640px)" srcSet={publicPath(site.heroImageMobile)} />
+          <img src={publicPath(site.heroImage)} alt="" />
         </picture>
         <div className="shell hero__content">
           <h1 dangerouslySetInnerHTML={{ __html: site.home.heroTitleHtml }} />

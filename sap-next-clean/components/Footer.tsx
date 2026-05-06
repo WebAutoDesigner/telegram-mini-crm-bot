@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/data/site";
+import { publicPath } from "@/lib/publicPath";
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
           <div className="socials">
             {site.contactBlock.socials.map((social) => (
               <a key={`${social.label}-${social.href}`} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label || "Социальная сеть"}>
-                {social.icon ? <img src={social.icon} alt="" /> : <span>{(social.label || "?").slice(0, 1)}</span>}
+                {social.icon ? <img src={publicPath(social.icon)} alt="" /> : <span>{(social.label || "?").slice(0, 1)}</span>}
               </a>
             ))}
           </div>

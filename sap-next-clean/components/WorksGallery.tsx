@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { publicPath } from "@/lib/publicPath";
 
 type Work = {
   image?: string;
@@ -24,7 +25,7 @@ export function WorksGallery({ works }: Props) {
         <div className="works__grid">
           {visible.map((work, index) => (
             <button className={`work work--${(index % 5) + 1}`} key={`${work.image}-${index}`} type="button">
-              <img src={work.image} alt={work.alt || `Работа ${index + 1}`} loading="lazy" />
+              <img src={publicPath(work.image)} alt={work.alt || `Работа ${index + 1}`} loading="lazy" />
             </button>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CallbackButton } from "@/components/CallbackButton";
 import { servicePath, site } from "@/data/site";
+import { publicPath } from "@/lib/publicPath";
 
 function buildGroups() {
   return site.services
@@ -35,7 +36,7 @@ export function HomePricePreview() {
           {groups.map((group, index) => (
             <article className="home-price__card" key={`${group.title}-${index}`}>
               <Link className="home-price__image" href={group.href}>
-                {group.image ? <img src={group.image} alt="" loading="lazy" /> : null}
+                {group.image ? <img src={publicPath(group.image)} alt="" loading="lazy" /> : null}
               </Link>
               <div className="home-price__body">
                 <h3>{group.title}:</h3>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { servicePath, site } from "@/data/site";
+import { publicPath } from "@/lib/publicPath";
 
 type Props = {
   variant?: "home" | "all";
@@ -19,7 +20,7 @@ export function ServiceCards({ variant = "home" }: Props) {
               className="service-card"
               key={service.href}
               href={servicePath(service)}
-              style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.78)), url("${service.image}")` }}
+              style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.78)), url("${publicPath(service.image)}")` }}
             >
               <span>{service.title}</span>
             </Link>
