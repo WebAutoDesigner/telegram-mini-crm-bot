@@ -1127,7 +1127,7 @@ h3 {
   }
 
   .page-pad {
-    padding-top: 108px;
+    padding-top: 42px;
   }
 
   .header {
@@ -1136,6 +1136,8 @@ h3 {
 
   .header__inner {
     gap: 12px;
+    justify-items: center;
+    text-align: center;
   }
 
   .brand {
@@ -1145,8 +1147,9 @@ h3 {
   .nav {
     display: grid;
     grid-template-columns: repeat(4, max-content);
-    justify-content: start;
+    justify-content: center;
     gap: 10px 16px;
+    width: 100%;
     overflow-x: auto;
     padding-bottom: 2px;
     font-size: 13px;
@@ -1158,6 +1161,7 @@ h3 {
   }
 
   .header__contacts {
+    justify-content: center;
     gap: 10px;
   }
 
@@ -1171,8 +1175,8 @@ h3 {
   }
 
   .hero {
-    min-height: 510px;
-    height: 510px;
+    min-height: calc(100svh - 108px);
+    height: calc(100svh - 108px);
   }
 
   .hero::after {
@@ -1362,8 +1366,15 @@ h3 {
   }
 
   .back-link {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .contact-page .back-link {
+    font-size: 18px;
+    font-weight: 700;
   }
 
   .service-hero {
