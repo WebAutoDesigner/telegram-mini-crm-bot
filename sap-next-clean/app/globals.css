@@ -1123,23 +1123,83 @@ h3 {
 
 @media (max-width: 640px) {
   .shell {
-    width: min(100% - 24px, 1200px);
+    width: min(100% - 28px, 1200px);
   }
 
   .page-pad {
-    padding-top: 132px;
+    padding-top: 108px;
+  }
+
+  .header {
+    padding: 14px 0 12px;
+  }
+
+  .header__inner {
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: start;
+    gap: 10px 16px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    font-size: 13px;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header__contacts {
+    gap: 10px;
+  }
+
+  .header__phone {
+    font-size: 15px;
+  }
+
+  .socials--small a {
+    width: 20px;
+    height: 20px;
   }
 
   .hero {
-    min-height: 620px;
+    min-height: 510px;
+    height: 510px;
+  }
+
+  .hero::after {
+    background: linear-gradient(180deg, rgba(0,0,0,.34), rgba(0,0,0,.76));
+  }
+
+  .hero__content {
+    align-content: end;
+    padding: 0 0 48px;
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 38px;
+    line-height: 1;
   }
 
   .hero p {
-    font-size: 17px;
+    margin: 22px 0 34px;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .hero__button,
+  .cta {
+    width: 100%;
+    min-width: 0;
+    height: 54px;
   }
 
   .section-head h2,
@@ -1149,63 +1209,119 @@ h3 {
   .contact-page h1,
   .service-hero h1,
   .subservice h2 {
-    font-size: 36px;
+    font-size: 32px;
+    line-height: 1.08;
+  }
+
+  .section-head {
+    margin-bottom: 42px;
   }
 
   .section-head p {
-    margin-top: 34px;
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.55;
   }
 
   .services {
-    padding: 90px 0 70px;
+    padding: 62px 0 56px;
+  }
+
+  .services--all .section-head {
+    margin-bottom: 42px;
   }
 
   .service-card,
   .services--all .service-card {
-    min-height: 300px;
-    padding: 0 24px 30px;
+    min-height: 220px;
+    padding: 0 18px 22px;
+    border-radius: 12px;
+  }
+
+  .service-card span {
+    max-width: 270px;
+    font-size: 21px;
+  }
+
+  .works {
+    padding-bottom: 64px;
   }
 
   .works h2 {
-    padding-top: 70px;
+    padding-top: 56px;
+    font-size: 30px;
+    letter-spacing: 0;
   }
 
   .works__grid {
-    gap: 22px;
-    margin-top: 54px;
+    gap: 16px;
+    margin-top: 34px;
   }
 
   .work,
   .work--1,
   .work--4,
   .work--5 {
-    height: 270px;
+    height: 236px;
+    border-radius: 14px;
+  }
+
+  .works__more {
+    width: 100%;
+    height: 54px;
+    margin-top: 28px;
   }
 
   .home-price {
-    padding: 72px 0;
+    padding: 58px 0 64px;
+  }
+
+  .home-price__head {
+    margin-bottom: 38px;
   }
 
   .home-price__head h2 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .home-price__head p {
-    margin-top: 34px;
+    margin-top: 22px;
     font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .home-price__list {
+    gap: 22px;
   }
 
   .home-price__card {
     min-height: 0;
+    border-radius: 14px;
+  }
+
+  .home-price__image {
+    min-height: 218px;
+    height: 218px;
   }
 
   .home-price__body {
-    padding: 32px 22px;
+    padding: 24px 18px 26px;
+  }
+
+  .home-price__body h3 {
+    margin-bottom: 18px;
+    font-size: 22px;
   }
 
   .home-price__row {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .home-price__row strong,
+  .home-price__row b {
+    font-size: 17px;
+    white-space: normal;
   }
 
   .home-price__row span {
@@ -1215,19 +1331,179 @@ h3 {
   .home-price__actions {
     align-items: stretch;
     flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .home-price__more,
+  .home-price__book,
+  .home-price__all {
+    width: 100%;
+    min-width: 0;
+    height: 52px;
+  }
+
+  .home-price__all {
+    margin-top: 34px;
+  }
+
+  .reviews,
+  .contacts-preview,
+  .footer {
+    padding: 58px 0;
+  }
+
+  .contacts-preview__grid,
+  .footer__grid {
+    gap: 32px;
+  }
+
+  .footer__links {
+    align-content: start;
+  }
+
+  .back-link {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .service-hero {
+    padding-bottom: 44px;
+  }
+
+  .service-hero__image {
+    margin: 34px 0 24px;
+    border-radius: 12px;
+  }
+
+  .service-hero__image img {
+    max-height: none;
+    height: 250px;
+  }
+
+  .service-hero p,
+  .subservice__lead,
+  .child-block p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .subservices {
+    padding: 18px 0 62px;
+  }
+
+  .subservice {
+    padding-bottom: 64px;
+  }
+
+  .subservice h2 {
+    margin-top: 18px;
+  }
+
+  .subservice-card {
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .subservice-card__image {
+    height: 218px;
+    border-radius: 12px;
+  }
+
+  .subservice-card__text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .subservice--carded .price-table,
+  .price-table {
+    margin-top: 38px;
+  }
+
+  .price-row {
+    padding: 18px 0;
+  }
+
+  .price-row strong,
+  .price-row b {
+    font-size: 19px;
+  }
+
+  .price-page,
+  .contact-page {
+    padding-bottom: 64px;
+  }
+
+  .price-page__list,
+  .contact-page__grid {
+    margin-top: 44px;
+  }
+
+  .contact-page__grid {
+    gap: 42px;
+  }
+
+  .contact-page span {
+    margin-bottom: 20px;
+  }
+
+  .contact-page a,
+  .contact-page b {
+    font-size: 24px;
+  }
+
+  .map-frame {
+    height: 320px;
+  }
+
+  .contact-page__map {
+    margin-top: 44px;
   }
 
   .consultation {
-    padding: 70px 0;
+    padding: 58px 0 64px;
   }
 
   .consultation__card {
     width: min(100% - 24px, 1200px);
-    padding: 34px 22px;
+    gap: 28px;
+    padding: 28px 18px;
+    border-radius: 12px;
   }
 
   .consultation h2 {
-    font-size: 38px;
+    font-size: 34px;
+    line-height: 1.12;
+  }
+
+  .consultation__phone {
+    margin-top: 28px;
+    font-size: 24px;
+  }
+
+  .consultation__text {
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+
+  .consultation__form {
+    gap: 14px;
+  }
+
+  .consultation__form input[type="text"],
+  .consultation__form input:not([type]) {
+    height: 54px;
+  }
+
+  .consultation__form label {
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .consultation__form button {
+    width: 100%;
+    min-width: 0;
+    height: 56px;
   }
 
   .modal__card {
