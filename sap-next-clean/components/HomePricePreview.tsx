@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { CallbackButton } from "@/components/CallbackButton";
 import { servicePath, site } from "@/data/site";
 import { publicPath } from "@/lib/publicPath";
 
@@ -56,7 +55,6 @@ export function HomePricePreview() {
                   <Link className="home-price__more" href={group.href}>
                     Подробнее
                   </Link>
-                  <CallbackButton className="home-price__book">Записаться</CallbackButton>
                 </div>
               </div>
             </article>
