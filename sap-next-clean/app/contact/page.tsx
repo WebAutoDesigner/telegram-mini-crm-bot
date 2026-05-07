@@ -1,10 +1,11 @@
 import { site } from "@/data/site";
+import { publicPath } from "@/lib/publicPath";
 
 export default function ContactPage() {
   return (
     <section className="contact-page page-pad">
       <div className="shell">
-        <a className="back-link" href="/">
+        <a className="back-link" href={publicPath("/")}>
           ← На главную
         </a>
         <h1>Контакты</h1>

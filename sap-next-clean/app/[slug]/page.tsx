@@ -21,7 +21,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     <>
       <section className="service-hero page-pad">
         <div className="shell">
-          <a className="back-link" href="/vse-uslugi/">
+          <a className="back-link" href={publicPath("/vse-uslugi/")}>
             ← Назад
           </a>
           <h1>{title}</h1>

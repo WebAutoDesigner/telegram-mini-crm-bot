@@ -1,11 +1,12 @@
 import { CallbackButton } from "@/components/CallbackButton";
 import { allPriceGroups } from "@/data/site";
+import { publicPath } from "@/lib/publicPath";
 
 export default function PricePage() {
   return (
     <section className="price-page page-pad">
       <div className="shell">
-        <a className="back-link" href="/">
+        <a className="back-link" href={publicPath("/")}>
           ← На главную
         </a>
         <h1>Цены на детейлинг автомобиля</h1>

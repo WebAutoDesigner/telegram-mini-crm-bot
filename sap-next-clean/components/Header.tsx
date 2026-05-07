@@ -12,12 +12,12 @@ export function Header() {
   return (
     <header className="header">
       <div className="shell header__inner">
-        <a className="brand" href="/">
+        <a className="brand" href={publicPath("/")}>
           {site.brandName}
         </a>
         <nav className="nav" aria-label="Основная навигация">
           {nav.map((item) => (
-            <a key={item.href} href={item.href}>
+            <a key={item.href} href={publicPath(item.href)}>
               {item.label}
             </a>
           ))}
